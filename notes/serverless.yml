@@ -20,19 +20,10 @@ functions:
     events:
       - http:
           method: put
-          path: notes/{id}  
-  deleteNote:
-    handler: handler.deleteNote
-    events:
-      - http:
-          method: delete
           path: notes/{id}
-  getAllNotes:
-    handler: handler.getAllNotes
-    events:
-      - http:
-          method: get
-          path: notes          
+
+# add deleteNote (method delete) and getAllNotes (method get) lambda functions and connect them wih the appropriate handlers
+          
 # you can add CloudFormation resource templates here
 #resources:
 #  Resources:

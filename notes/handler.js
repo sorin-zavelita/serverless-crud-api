@@ -13,25 +13,20 @@ module.exports.createNote = async (event) => {
 };
 
 
+// This function updates a given note by its ID //
 module.exports.updateNote = async (event) => {
+  // Retrieve the ID of the note to update from the request path parameters //
   let notesID = event.pathParameters.id;
+
+  // Return a status code of 200 and body string indicating that the note with the relevant ID has been updated // 
   return {
     statusCode: 200,
     body: JSON.stringify("A new note with the id " + notesID + " has been created!"),
   };
 };
 
-module.exports.deleteNote = async (event) => {
-  let notesID = event.pathParameters.id;
-  return {
-    statusCode: 200,
-    body: JSON.stringify("A new note with the id " + notesID + " has been deleted!"),
-  };
-};
 
-module.exports.getAllNotes = async (event) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify("All nodes are returned!"),
-  };
-};
+//create deleteNote
+
+//create getAllNotes
+
