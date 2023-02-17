@@ -26,7 +26,27 @@ module.exports.updateNote = async (event) => {
 };
 
 
-//create deleteNote
+// This function deletes a given note by its ID //
+module.exports.deleteNote = async (event) => {
+  // Retrieve the ID of the note to update from the request path parameters //
+  let notesID = event.pathParameters.id;
+  // Return a status code of 200 and body string indicating that the note with the relevant ID has been updated // 
+  return {
+    statusCode: 200,
+    body: JSON.stringify("The note with the id " + notesID + " has been deleted!"),
+  };
+};
 
-//create getAllNotes
+// This function deletes a given note by its ID //
+module.exports.getAllNotes = async (event) => {
+  
+  // Set status code to 200 for get
+  const statusCode = 200;
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify("Returning all notes! "),
+  };
+};
+
 
